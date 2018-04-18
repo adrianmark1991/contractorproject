@@ -1,7 +1,7 @@
 /*======HELPER CLASSES======*/
 /*-----START-----*/
 /*fonts*/
-.font-roboto {font-family: 'Roboto Slab', serif;}
+.font-roboto {font-family: 'Roboto', sans-serif;}
 
 /*font size*/
 .font-10 {font-size: 10px;}
@@ -59,7 +59,7 @@
 /*======GENERAL CLASSES=====*/
 /*-----START-----*/
 body {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 /*-----END-----*/
 
@@ -73,7 +73,24 @@ body {
     height: 100%;
     background: linear-gradient(to top right, rgba(34,34,34,0.5), rgba(34,34,34,0.2) );
 }
-
+.cover-title h1{
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+.cover-title p{
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+.cover-title .lead {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
 .jumbotron {
     z-index: 0;
     height: 100vh;
@@ -90,14 +107,44 @@ body {
     padding-top: 300px;
     line-height: 25px;
 }
-
+.btn-outline-success:not(:disabled):not(.disabled):active {
+    background-color: rgba(255,255,255,1);
+    border-color: rgba(255,255,255,1);
+    color: rgba(34,34,34,1);
+}
+.btn-outline-success:not(:disabled):not(.disabled):active:focus,.btn-outline-success:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255,255,255,0);
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+    background-color: rgba(251,190,63,1);
+    border-color: rgba(251,190,63,1);
+    color: rgba(34,34,34,1);
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,.btn-outline-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255,255,255,0);
+}
+.btn-outline-warning:not(:disabled):not(.disabled):active {
+    background-color: rgba(251,190,63,1);
+    border-color: rgba(251,190,63,1);
+    color: rgba(34,34,34,1);
+}
+.btn-outline-warning:not(:disabled):not(.disabled):active:focus,.btn-outline-warning:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255,255,255,0);
+}
+.btn-outline-info:not(:disabled):not(.disabled):active {
+    background-color: rgba(251,190,63,1);
+    border-color: rgba(251,190,63,1);
+    color: rgba(34,34,34,1);
+}
+.btn-outline-info:not(:disabled):not(.disabled):active:focus,.btn-outline-info:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255,255,255,0);
+}
 .btn-lg {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
     font-size: 16px;
 }
-
 .btn-outline-primary {
     border: 3px solid rgba(251,190,63,1);
     background-color: transparent;
@@ -156,29 +203,54 @@ body {
 .header-logo a{
     width: 100%;
 }
-
 .phone-icon,
 .email-icon {
     width: 30px;
     font-size: 30px;
 }
-
 .call-us-info,
 .email-us-info {
     line-height: 14px;
 }
-
 hr {
     width: 100%;
     height: 0.01em;
     background: rgba(184,184,184, 0.3);
     margin: 0 25px 0 25px ;
 }
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.8);
+}
+.navbar-dark .navbar-nav .active>.nav-link {
+    color: rgba(251,190,63,1);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+.navbar-nav .nav-item .nav-link:hover {
+    color: rgba(251,190,63,1);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
 /*-----END-----*/
 
 
 /*======CARD STYLES=====*/
 /*-----START-----*/
+.card-deck {
+    max-height: 50vh;
+}
 .card {
     border: none;
 }
@@ -189,8 +261,8 @@ hr {
 
 .card-img-overlay {
     width: 100%;
-    height: 25%;
-    background: linear-gradient(to top, rgba(34,34,34,0.5), rgba(34,34,34,0.3) );
+    height: 35%;
+    background: linear-gradient(to top, rgba(34,34,34,0.7), rgba(34,34,34,0.7) );
     top: initial;
 }
 
@@ -201,12 +273,43 @@ hr {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(to top, rgba(34,34,34,0.5), rgba(34,34,34,0.5) );
+    background: linear-gradient(to right, rgba(34,34,34,0.7), rgba(34,34,34,0.7) );
     padding: 1.25rem;
 }
 
 .card-reveal {
     display: none;
+}
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+.wrapper:after {
+    content: '';
+    display: block;
+    padding-top: 140%;
+}
+
+.wrapper img {
+    width: auto;
+    height: 100%;
+    max-width: none;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+}
+.civil {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.glazing {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.interior {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
 }
 /*-----END-----*/
 
@@ -228,14 +331,20 @@ hr {
 .gallery-pecca {
     background: url("../images/gallery/pecca.jpg") no-repeat center;
     background-size: cover;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
 }
 .gallery-maxell {
     background: url("../images/gallery/maxell.jpg") no-repeat center;
     background-size: cover;
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 .gallery-earth {
     background: url("../images/gallery/earth.jpg") no-repeat center;
     background-size: cover;
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
 }
 .gallery-overlay {
     width: 100%;
@@ -284,6 +393,18 @@ ul {
 
 /*======COMPANY STYLES=====*/
 /*-----START-----*/
+.quality-control {
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+}
+.project-tracking {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+.communication {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
 .project-planning img,
 .project-tracking img,
 .communication img,
@@ -354,4 +475,65 @@ ul {
 .contact-info {
     background-color: #222;
 }
+/*-----END-----*/
+
+
+/*======SIDEBAR STYLES=====*/
+/*-----START-----*/
+
+.footer {
+    background-color: #222;
+}
+.footer-nav {
+    margin-bottom: 10px;
+}
+.footer-nav li a {
+    color: rgba(255,255,255,1);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.footer-nav li a:hover {
+    text-decoration: none;
+    color: rgba(251,190,63,1);
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.footer-credit p a {
+    color: rgba(184,184,184, 0.8);
+}
+.footer-credit p a:hover{
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+/*-----END-----*/
+
+/*======TOP BUTTON STYLES=====*/
+/*-----START-----*/
+#goToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: rgba(34,34,34,1);
+    cursor: pointer;
+    font-size: 70px;
+    transition: 0.3s;
+}
+
+#goToTop:hover {
+    background-color: transparent;
+    color: rgba(251,190,63,1);
+    transition: 0.3s;
+}
+
 /*-----END-----*/

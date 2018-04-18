@@ -6,20 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Ubuntu" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
 
     <!--Js files-->
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
             integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
             crossorigin="anonymous"></script>
+    <script src="js/smooth-scroll.min.js"></script>
 
     <title>Mentari Jaya Enterprise Sdn.Bhd.</title>
 </head>
 <body>
 <!--start header-->
-<section id="header" class="fixed-top">
+<section id="header" class="fixed-top animated slideInDown">
     <header>
         <div class="container px-0">
             <div class="row no-gutters">
@@ -30,7 +32,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-md-9 bg-black-07">
+                <div class="col-md-9 bg-black">
                     <div class="container">
                         <div class="row">
                             <div class="topnav col-md-12 px-4">
@@ -71,19 +73,19 @@
                                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                                         <ul class="navbar-nav w-100 nav-justified">
                                             <li class="nav-item active">
-                                                <a class="nav-link px-0 font-14" href="#">HOME <span class="sr-only">(current)</span></a>
+                                                <a class="nav-link px-0 font-14" data-scroll href="#cover">HOME <span class="sr-only">(current)</span></a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link px-0 font-14" href="#">SERVICES</a>
+                                                <a class="nav-link px-0 font-14" data-scroll href="#service">SERVICES</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link px-0 font-14" href="#">PROJECTS</a>
+                                                <a class="nav-link px-0 font-14" data-scroll href="#gallery">PROJECTS</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link px-0 font-14" href="#">ABOUT US</a>
+                                                <a class="nav-link px-0 font-14" data-scroll href="#company">ABOUT US</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link px-0 font-14" href="#">CONTACT US</a>
+                                                <a class="nav-link px-0 font-14" data-scroll href="#form">CONTACT US</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -95,41 +97,46 @@
             </div>
         </div>
     </header>
-</section>
-<section id="cover">
+</section><!--end header-->
+
+<!--start cover-->
+<section id="cover" class="animated fadeIn">
     <div class="cover">
         <div class="jumbotron p-0">
             <div class="cover-overlay">
                 <div class="container">
                     <div class="cover-title">
-                        <h1 class="display-4 font-roboto"><span class="item-yellow">MENTARI JAYA</span> <br>
+                        <h1 class="display-4 animated fadeInLeft"><span class="item-yellow">MENTARI JAYA</span> <br>
                             <span class="item-white">ENTERPRISE SDN.BHD.</span></h1>
-                        <p class="lead py-2 item-white-08">Over collective 35 years of experienced <br> Civil Contractors at your service</p>
-                        <p class="lead">
-                            <a class="btn btn-outline-primary btn-lg font-weight-bold mr-3 px-5" href="#" role="button">Services</a>
-                            <a class="btn btn-outline-success btn-lg font-weight-bold px-5" href="#" role="button">Projects</a>
-                        </p>
+                        <p class="lead py-2 item-white-08 animated fadeInLeft">Over collective 35 years of experienced <br> Civil Contractors at your service</p>
+                        <div class="lead animated fadeInUp">
+                            <a class="btn btn-outline-primary btn-lg font-weight-bold mr-3 px-5" data-scroll href="#service" role="button">Services</a>
+                            <a class="btn btn-outline-success btn-lg font-weight-bold px-5" data-scroll href="#gallery" role="button">Projects</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
+</section><!--end cover-->
+
 <!--begin service card-->
 <section id="service">
     <div class="service-info px-0">
         <div class="container">
             <!--start service title-->
-            <div class="service-title py-5 text-center">
+            <div class="service-title py-5 text-center wow animated fadeIn">
                 <p class="my-0 font-14">SERVICES</p>
                 <h2>The Right Expertise For Your Project</h2>
             </div> <!-- end service title-->
             <!--start service card deck-->
             <div class="card-deck">
                 <!--begin construction card-->
-                <div class="card text-white ml-0">
+                <div class="card construction text-white ml-0 wow animated fadeIn">
                     <!--begin construction card image-->
-                    <img class="card-img" src="images/card/construction-works.png" alt="civil-works">
+                    <div class="wrapper">
+                        <img class="card-img" src="images/card/construction.jpg" alt="construction-works">
+                    </div>
                     <!--end construction card image-->
                     <!--start construction reveal card-->
                     <div id="content-construction" class="card-content">
@@ -141,17 +148,19 @@
                     <!--start construction hidden card -->
                     <div id="content-construction-reveal" class="card-reveal">
                         <div class="card-img-overlay-reveal d-flex flex-column justify-content-start">
-                            <h5 class="card-title font-18 item-yellow font-weight-bold">Construction</h5>
-                            <p class="card-title font-14">General construction works,
+                            <h5 class="card-title font-20 item-yellow font-weight-bold">Construction</h5>
+                            <p class="card-title font-roboto font-16">General construction works,
                                 micro-piling, builder's work and steel structural works.</p>
                             <button id="hide-construction" class="btn btn-sm btn-outline-warning font-13 px-0">Less info</button>
                         </div>
                     </div> <!-- end construction hidden card-->
                 </div> <!-- end construction card-->
                 <!--begin civil card-->
-                <div class="card text-white">
+                <div class="card civil text-white wow animated fadeIn">
                     <!--begin civil card image-->
-                    <img class="card-img" src="images/card/civil-works.png" alt="civil-works">
+                    <div class="wrapper">
+                        <img class="card-img" src="images/card/civil.jpg" alt="civil-works">
+                    </div>
                     <!--end civil card image-->
                     <!--start civil reveal card-->
                     <div id="content-civil" class="card-content">
@@ -163,17 +172,19 @@
                     <!--start civil hidden card -->
                     <div id="content-civil-reveal" class="card-reveal">
                         <div class="card-img-overlay-reveal d-flex flex-column justify-content-start">
-                            <h5 class="card-title font-18 item-yellow font-weight-bold">Civil</h5>
-                            <p class="card-title font-14">Civil contractor works, drainage and roads, mechanical and electrical,
+                            <h5 class="card-title font-20 item-yellow font-weight-bold">Civil</h5>
+                            <p class="card-title font-roboto font-16">Civil contractor works, drainage and roads, mechanical and electrical,
                                 plumbing and fire-fighting.</p>
                             <button id="hide-civil" class="btn btn-sm btn-outline-warning font-13 px-0">Less info</button>
                         </div>
                     </div> <!-- end civil hidden card-->
                 </div> <!-- end civil card-->
                 <!--begin glazing card-->
-                <div class="card text-white">
+                <div class="card glazing text-white wow animated fadeIn">
                     <!--begin glazing card image-->
-                    <img class="card-img" src="images/card/aluminium-glazing-works.png" alt="civil-works">
+                    <div class="wrapper">
+                        <img class="card-img" src="images/card/glazing.jpg" alt="civil-works">
+                    </div>
                     <!--end glazing card image-->
                     <!--start glazing reveal card-->
                     <div id="content-glazing" class="card-content">
@@ -185,17 +196,19 @@
                     <!--start glazing hidden card -->
                     <div id="content-glazing-reveal" class="card-reveal">
                         <div class="card-img-overlay-reveal d-flex flex-column justify-content-start">
-                            <h5 class="card-title font-18 item-yellow font-weight-bold">Aluminium &amp; Glazing</h5>
-                            <p class="card-title font-14">Installation and maintenance of all types of glass and aluminium works,
+                            <h5 class="card-title font-20 item-yellow font-weight-bold">Aluminium <br> &amp; Glazing</h5>
+                            <p class="card-title font-roboto font-16">Installation and maintenance of all types of glass and aluminium works,
                                 furnitures and fixtures.</p>
                             <button id="hide-glazing" class="btn btn-sm btn-outline-warning font-13 px-0">Less info</button>
                         </div>
                     </div> <!-- end glazing hidden card-->
                 </div> <!-- end glazing card-->
                 <!--begin interior card-->
-                <div class="card text-white mr-0">
+                <div class="card interior text-white mr-0 wow animated fadeIn">
                     <!--begin glazing card image-->
-                    <img class="card-img" src="images/card/interior-works.png" alt="interior-works">
+                    <div class="wrapper">
+                        <img class="card-img img-fluid" src="images/card/interior.jpg" alt="interior-works">
+                    </div>
                     <!--end interior card image-->
                     <!--start interior reveal card-->
                     <div id="content-interior" class="card-content">
@@ -207,8 +220,8 @@
                     <!--start interior hidden card -->
                     <div id="content-interior-reveal" class="card-reveal">
                         <div class="card-img-overlay-reveal d-flex flex-column justify-content-start">
-                            <h5 class="card-title font-18 item-yellow font-weight-bold">Interior</h5>
-                            <p class="card-title font-14">Interior decorations,renovation, partioning and supplier of
+                            <h5 class="card-title font-20 item-yellow font-weight-bold">Interior</h5>
+                            <p class="card-title font-roboto font-16">Interior decorations, renovation, partioning and supplier of
                                 various furniture, office equipment and household wares.</p>
                             <button id="hide-interior" class="btn btn-sm btn-outline-warning font-13 px-0">Less info</button>
                         </div>
@@ -228,7 +241,7 @@
                     <!--start gallery title box-->
                     <div class="gallery-title col-md-12 px-0 mx-0">
                         <!--start gallery title-->
-                        <div class="gallery-text bg-yellow mb-4">
+                        <div class="gallery-text bg-yellow mb-4 wow animated slideInLeft">
                             <p class="pl-3 pt-3 my-0 t-up font-14 item-dark">projects</p>
                             <h2 class="pl-3 pb-3 my-0 t-up font-24 font-weight-bold">Our Latest Projects</h2>
                         </div>
@@ -236,7 +249,7 @@
                     <!--start gallery projects 1/3-->
                     <div class="col-md-3 px-0">
                         <!--start batu berendam project-->
-                        <div class="col-md-12 px-0 gallery-rendam">
+                        <div class="col-md-12 px-0 gallery-rendam wow animated fadeIn">
                             <div id="gallery-rendam" class="gallery-overlay px-3 pt-3">
                                 <p class="mb-0 t-up font-10 item-white-08">airport</p>
                                 <p class="mb-0 t-up font-20 font-weight-bold line-height-20 item-white">batu berendam <br> airport</p>
@@ -255,7 +268,7 @@
                             </div> <!--end hidden rendam info-->
                         </div> <!--end batu berendam project-->
                         <!--start pecca project-->
-                        <div class="col-md-12 px-0 height-half gallery-pecca">
+                        <div class="col-md-12 px-0 height-half gallery-pecca wow animated fadeIn">
                             <div id="gallery-pecca" class="gallery-overlay px-3 pt-3">
                                 <p class="mb-0 t-up font-10 item-white-08">industrial</p>
                                 <p class="mb-0 t-up font-20 font-weight-bold line-height-20 item-white">pecca leather</p>
@@ -274,7 +287,7 @@
                         </div> <!--end pecca project-->
                     </div><!--end gallery project 1/3-->
                     <!--start gallery 2/3, maxell project-->
-                    <div class="col-md-6 px-0 gallery-maxell">
+                    <div class="col-md-6 px-0 gallery-maxell wow animated fadeIn">
                         <div id="gallery-maxell" class="gallery-overlay-lg px-3 pt-3">
                             <p class="mb-0 t-up font-10 item-white-08">industrial</p>
                             <p class="mb-0 t-up font-20 font-weight-bold line-height-20 item-white">maxell tohshin</p>
@@ -296,7 +309,7 @@
                         </div> <!--end hidden maxell info-->
                     </div> <!--end gallery 2/3, maxell project-->
                     <!--start gallery 3/3, earth project-->
-                    <div class="col-md-3 px-0 gallery-earth">
+                    <div class="col-md-3 px-0 gallery-earth wow animated fadeIn">
                         <div id="gallery-earth" class="gallery-overlay-lg px-3 pt-3">
                             <p class="mb-0 t-up font-10 item-white-08">shop office</p>
                             <p class="mb-0 t-up font-20 font-weight-bold line-height-20 item-white">the earth</p>
@@ -326,14 +339,14 @@
             <!--start company content-->
             <div class="company-title col-md-12 px-0">
                 <!--start company title-->
-                <div class="company-text bg-yellow t-up pl-3 py-3 mb-4">
+                <div class="company-text bg-yellow t-up pl-3 py-3 mb-4 wow animated slideInLeft">
                     <p class="mb-0 font-14 item-dark">projects</p>
                     <h2 class="mb-0 font-24 font-weight-bold">the company &amp; philosophy</h2>
                 </div>
             </div>
             <!--start company info-->
-            <div class="col-md-4 px-0">
-                <p class="font-14 item-dark pl-3">Over the years, we've undertaken  various challenging projects and accumulated skills,
+            <div class="col-md-4 px-0 wow animated fadeIn">
+                <p class="font-14 font-roboto item-dark pl-3">Over the years, we've undertaken  various challenging projects and accumulated skills,
                     know-how and experiences in design and built solutions, project management services, building trades and related engineering works.
                     <br><br>
                     Our objective is to provide quality works and timely completion when we are chosen by clients to execute their projects.
@@ -344,36 +357,36 @@
             <div class="col-md-7 offset-md-1 px-0 container company-icons bg-black">
                 <div class="row m-4">
                     <!--start project planning icon-->
-                    <div class="col-md-6 px-0 mb-4 mt-2 project-planning">
+                    <div class="col-md-6 px-0 mb-4 mt-2 project-planning wow animated fadeIn">
                         <div class="d-flex px-1 pb-3">
                             <img src="images/icon/project-planning.svg" alt="detailed-project-planning">
                             <p class="item-white mb-0 pl-2 font-18 t-up line-height-20 font-weight-bold">detailed <br> project planning</p>
                         </div>
-                        <p class="item-white-08 mb-0 pr-3 font-14">Outlining project schedule in detail and thorough planning in resources and time to meet client's objective </p>
+                        <p class="item-white-08 mb-0 pr-3 font-14 font-roboto">Outlining project schedule in detail and thorough planning in resources and time to meet client's objective </p>
                     </div> <!--end project planning icon-->
                     <!--start quality control icon-->
-                    <div class="col-md-6 px-0 mb-4 mt-2 quality-control">
+                    <div class="col-md-6 px-0 mb-4 mt-2 quality-control wow animated fadeIn">
                         <div class="d-flex px-1 pb-3">
                             <img src="images/icon/quality-control.svg" alt="quality-control">
                             <p class="item-white mb-0 pl-2 font-18 t-up line-height-20 font-weight-bold">quality <br> control</p>
                         </div>
-                        <p class="item-white-08 mb-0 pr-3 font-14">Supervise closely on quality of work done to enforce the highest standards</p>
+                        <p class="item-white-08 mb-0 pr-3 font-14 font-roboto">Supervise closely on quality of work done to enforce the highest standards</p>
                     </div> <!--end quality control icon-->
                     <!--start communication icon-->
-                    <div class="col-md-6 px-0 communication">
+                    <div class="col-md-6 px-0 communication wow animated fadeIn">
                         <div class="d-flex px-1 pb-3">
                             <img src="images/icon/communication.svg" alt="effective-communication">
                             <p class="item-white mb-0 pl-2 font-18 t-up line-height-20 font-weight-bold">effective <br> communications</p>
                         </div>
-                        <p class="item-white-08 mb-0 pr-3 font-14">Communicating effectively with all project stakeholders to ensure no misinformation</p>
+                        <p class="item-white-08 mb-0 pr-3 font-14 font-roboto">Communicating effectively with all project stakeholders to ensure no misinformation</p>
                     </div> <!--end communication icon-->
                     <!--start project tracking icon-->
-                    <div class="col-md-6 px-0 project-tracking">
+                    <div class="col-md-6 px-0 project-tracking wow animated fadeIn">
                         <div class="d-flex px-1 pb-3">
                             <img src="images/icon/project-tracking.svg" alt="project-tracking">
                             <p class="item-white mb-0 pl-2 font-18 t-up line-height-20 font-weight-bold">project <br> tracking</p>
                         </div>
-                        <p class="item-white-08 mb-0 pr-3 font-14">Tracking all progress of a project through effective communication to meet client's objective</p>
+                        <p class="item-white-08 mb-0 pr-3 font-14 font-roboto">Tracking all progress of a project through effective communication to meet client's objective</p>
                     </div> <!--end project tracking icon-->
                 </div>
             </div> <!--end company value icons-->
@@ -391,7 +404,7 @@
                 <div class="col-md-6 offset-3">
                     <p class="item-white font-24 font-weight-bold mb-0">Ready To <span class="font-28 item-yellow">Start</span> A New Project?</p>
                     <p class="item-white-08 mb-4 font-18">Let us know and get a free quote!</p>
-                    <a class="btn btn-outline-primary btn-lg font-weight-bold mr-3 px-5" href="#" role="button">Lets Get Started!</a>
+                    <a class="btn btn-outline-primary btn-lg font-weight-bold mr-3 px-5" data-scroll href="#form" role="button">Lets Get Started!</a>
                 </div> <!--end parallax content-->
             </div>
         </div>
@@ -403,7 +416,7 @@
         <div class="row">
             <div class="form-title col-md-12 px-0">
                 <!--start form title-->
-                <div class="form-content bg-yellow t-up pl-3 py-3 mb-4">
+                <div class="form-content bg-yellow t-up pl-3 py-3 mb-4 wow animated slideInLeft">
                     <p class="mb-0 font-14 item-dark">contact us</p>
                     <h2 class="mb-0 font-24 font-weight-bold">get in touch with us</h2>
                 </div>
@@ -496,6 +509,36 @@
         </form>
 </section>
 
+<section id="footer">
+    <div class="container px-0 footer">
+        <div class="row pt-4 pb-2">
+            <div class="col pt-4">
+                <p class="item-white-08 font-12 pl-4">©2018 Mentari Jaya Enterprise Sdn. Bhd. All Rights Reserved.</p>
+            </div>
+            <div class=" footer-right col d-flex flex-column pr-4">
+                <div class="col mb-1">
+                    <ul class="display-box footer-nav float-right font-12 t-up pl-0">
+                        <li class="item-grey-08"><a data-scroll href="#cover">Home</a> |&nbsp</li>
+                        <li class="item-grey-08"><a data-scroll href="#service">Services</a> |&nbsp</li>
+                        <li class="item-grey-08"><a data-scroll href="#gallery">Projects</a> |&nbsp</li>
+                        <li class="item-grey-08"><a data-scroll href="#company">About Us</a> |&nbsp</li>
+                        <li class="item-grey-08"><a data-scroll href="#form">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-credit col">
+                    <p class="float-right mb-0 item-grey-08 font-10">Designed and Developed by <a href="https://cymricstudio.com/">Cymric Studio</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--start back to top button-->
+<a data-scroll href="#cover">
+    <i id="goToTop" title="Go to top" class="fas fa-angle-up"></i>
+</a>
+
+<!--end back to top button-->
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -506,7 +549,28 @@
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
 <script src="js/javascript.js"></script>
+<script>
+    // initialise wow.js
+    new WOW().init();
+    //initialise smooth scroll
+    var scroll = new SmoothScroll('a[href*="#"]',{
+        offset: 100,
+        easing: 'easeInOutQuint'
+    });
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("goToTop").style.display = "block";
+        } else {
+            document.getElementById("goToTop").style.display = "none";
+        }
+    }
+</script>
 
 </body>
 </html>
